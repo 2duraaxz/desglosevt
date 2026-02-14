@@ -150,6 +150,9 @@ function mostrarInfo() {
 function cerrarInfo() {
     document.getElementById("panelInfo").classList.remove("active");
 }
+function toggleInfo(){
+    document.getElementById("infoDesglose").classList.toggle("active");
+}
 
 
 // ===============================
@@ -157,4 +160,5 @@ function cerrarInfo() {
 // ===============================
 
 mostrarHistorial();
+
 
