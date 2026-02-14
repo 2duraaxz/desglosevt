@@ -211,3 +211,29 @@ button:hover {
     font-size: 12px;
     opacity: 0.7;
 }
+/* 📱 Ajustes móviles para que no taponen inputs arriba */
+@media (max-width: 600px) {
+
+  /* Dale espacio arriba al contenido dentro de secciones */
+  .section.active .center-box {
+    margin-top: 70px; /* deja espacio para los botones fijos */
+  }
+
+  /* Reduce padding de top-bar si aún no cabe */
+  .top-bar {
+    padding: 0 12px;
+    gap: 8px;
+  }
+
+  /* Reduce tamaño para que no tapen */
+  .btn-volver, .btn-historial {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+
+  /* Ajusta inputs para que todo quede visible cuando abre teclado */
+  input, button {
+    font-size: 16px;
+  }
+}
+
