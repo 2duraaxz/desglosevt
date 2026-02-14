@@ -143,6 +143,13 @@ function cerrarHistorial(){
     document.getElementById("panelHistorial").classList.remove("active");
     document.getElementById("overlay").classList.remove("active");
 }
+function mostrarInfo() {
+    document.getElementById("panelInfo").classList.add("active");
+}
+
+function cerrarInfo() {
+    document.getElementById("panelInfo").classList.remove("active");
+}
 
 
 // ===============================
@@ -150,3 +157,4 @@ function cerrarHistorial(){
 // ===============================
 
 mostrarHistorial();
+
