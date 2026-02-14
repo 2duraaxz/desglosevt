@@ -17,13 +17,14 @@
 
 </head>
 
+<body>
+
+<!-- SERVICE WORKER -->
 <script>
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('service-worker.js');
 }
 </script>
-
-<body>
 
 <!-- OVERLAY -->
 <div id="overlay" class="overlay" onclick="cerrarHistorial()"></div>
@@ -49,7 +50,7 @@ if ('serviceWorker' in navigator) {
     <div id="menuPrincipal" class="center-box">
         <button onclick="mostrarVentanas()">VENTANAS</button>
         <button onclick="mostrarGabinete()">GABINETE</button>
-        <button onclick="scrollInfo()" class="btn-info">¿Qué es el Desglose?</button>
+        <button onclick="toggleInfo()" class="btn-info">¿Qué es el Desglose?</button>
     </div>
 
     <!-- SECCION VENTANAS -->
@@ -84,7 +85,7 @@ if ('serviceWorker' in navigator) {
 </div>
 
 <!-- ============================= -->
-<!-- SECCION SEO PARA GOOGLE -->
+<!-- PANEL INFORMACION DESGLOSE -->
 <!-- ============================= -->
 
 <section id="infoDesglose" class="info-seccion">
@@ -116,17 +117,17 @@ de puertas y ventanas en RD que buscan rapidez y precisión.
 </div>
 </section>
 
-
+<!-- SCRIPT TOGGLE INFO -->
 <script>
-function scrollInfo(){
-    document.getElementById("infoDesglose").scrollIntoView({behavior: "smooth"});
+function toggleInfo(){
+    document.getElementById("infoDesglose").classList.toggle("active");
 }
 </script>
 
 <script src="script.js"></script>
+
 </body>
 </html>
-
 
 
 
