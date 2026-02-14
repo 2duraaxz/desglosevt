@@ -259,12 +259,13 @@ button:hover {
 }
 
 .info-content {
-    background: #111;
+    background: #113;
     padding: 25px;
     max-width: 500px;
     border-radius: 10px;
     text-align: left;
 }
+
 
 
 
