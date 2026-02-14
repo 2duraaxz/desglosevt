@@ -3,40 +3,44 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Calculadora de Desglose para Ventanas y Puertas en RD</title>
+
+<title>Calculadora de Desglose de Ventanas y Puertas en RD | Talleres de Aluminio</title>
+
+<meta name="description" content="Calculadora gratuita de desglose de ventanas y puertas en República Dominicana. Herramienta profesional para talleres de aluminio y fabricantes.">
+
+<meta name="keywords" content="desglose ventanas RD, calculadora de ventanas aluminio, desglose puertas República Dominicana, talleres de aluminio RD">
+
 <link rel="stylesheet" href="styles.css">
 <link rel="icon" href="icon-192.png" type="image/png">
 <meta name="google-adsense-account" content="ca-pub-7905764936407202">
-<meta name="description" content="Calculadora gratuita para desglose de ventanas y puertas en República Dominicana. Fácil, rápida y profesional.">
 <meta name="google-site-verification" content="bvNejnMHIzALP0BOyenXvNjcj-IcUrlDMA7jDphKRYs" />
 
 </head>
 
-  <script>
+<script>
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('service-worker.js');
 }
 </script>
 
 <body>
+
 <!-- OVERLAY -->
 <div id="overlay" class="overlay" onclick="cerrarHistorial()"></div>
 
-<!-- PANEL HISTORIAL LATERAL -->
+<!-- PANEL HISTORIAL -->
 <div id="panelHistorial" class="panel-historial">
     <div class="panel-header">
         <h3>Historial</h3>
         <button class="btn-volver" onclick="cerrarHistorial()">✖</button>
     </div>
-
     <div id="historial"></div>
-
     <button class="delete-btn" onclick="limpiarHistorial()">Borrar Todo</button>
 </div>
 
 <header>
-    <h1>Desglose VT</h1>
-    <div class="sub">Sistema Profesional de Desglose</div>
+    <h1>Calculadora de Desglose VT</h1>
+    <div class="sub">Herramienta Profesional para Talleres de Aluminio en RD</div>
 </header>
 
 <div class="container">
@@ -45,6 +49,7 @@ if ('serviceWorker' in navigator) {
     <div id="menuPrincipal" class="center-box">
         <button onclick="mostrarVentanas()">VENTANAS</button>
         <button onclick="mostrarGabinete()">GABINETE</button>
+        <button onclick="scrollInfo()" class="btn-info">¿Qué es el Desglose?</button>
     </div>
 
     <!-- SECCION VENTANAS -->
@@ -56,46 +61,66 @@ if ('serviceWorker' in navigator) {
         </div>
 
         <div class="center-box">
-
             <input type="text" id="nombre" placeholder="Nombre del Trabajo">
             <input type="number" step="0.001" id="ancho" placeholder="Ancho">
             <input type="number" step="0.001" id="alto" placeholder="Altura">
 
             <button onclick="calcular()">CALCULAR</button>
-
             <div id="resultado"></div>
-
-            <div class="history" id="contenedorHistorial" style="display:none;">
-                <h3>Historial</h3>
-                <div id="historial"></div>
-                <button class="delete-btn" onclick="limpiarHistorial()">Borrar Todo</button>
-            </div>
-
         </div>
     </div>
 
     <!-- SECCION GABINETE -->
     <div id="seccionGabinete" class="section">
-
         <div class="top-bar">
             <button class="btn-volver" onclick="volverMenu()">← Volver</button>
         </div>
-
         <div class="center-box">
-            <div class="result-box">
-                <h3>Gabinete</h3>
-                <p>⚙️ Sección pendiente de desarrollo.</p>
-            </div>
+            <h3>Gabinete</h3>
+            <p>⚙️ Sección pendiente de desarrollo.</p>
         </div>
-
     </div>
 
 </div>
 
+<!-- ============================= -->
+<!-- SECCION SEO PARA GOOGLE -->
+<!-- ============================= -->
+
+<section id="infoDesglose" style="padding:40px 20px; max-width:900px; margin:auto; line-height:1.6;">
+
+<h2>¿Qué es el desglose de ventanas?</h2>
+<p>
+El desglose de ventanas es el cálculo exacto de las medidas de perfiles de aluminio
+necesarios para fabricar puertas y ventanas. Esta calculadora de ventanas en República Dominicana
+permite a talleres de aluminio realizar cortes precisos y evitar errores en producción.
+</p>
+
+<h2>¿Cómo usar la calculadora?</h2>
+<p>
+Para usar esta calculadora de desglose de ventanas solo debes ingresar el ancho y la altura del hueco.
+El sistema aplicará automáticamente las reducciones necesarias para jamba, cabezal y demás componentes.
+Es una herramienta ideal para fabricantes y carpinteros de aluminio en RD.
+</p>
+
+<h2>¿Para quién está hecha?</h2>
+<p>
+Esta herramienta está diseñada para talleres de aluminio, instaladores y fabricantes
+de puertas y ventanas en República Dominicana que buscan rapidez, precisión
+y optimización en sus trabajos.
+</p>
+
+</section>
+
+<script>
+function scrollInfo(){
+    document.getElementById("infoDesglose").scrollIntoView({behavior: "smooth"});
+}
+</script>
+
 <script src="script.js"></script>
 </body>
 </html>
-
 
 
 
